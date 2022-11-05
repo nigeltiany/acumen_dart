@@ -27,11 +27,11 @@ class AcumenClient extends $grpc.Client {
           ($core.List<$core.int> value) =>
               $0.ServiceSubscriptions.fromBuffer(value));
   static final _$liveSubscription =
-      $grpc.ClientMethod<$0.GetSubscriptionRequest, $0.ServiceSubscription>(
+      $grpc.ClientMethod<$0.GetSubscriptionRequest, $0.ServiceSubscriptions>(
           '/Acumen/LiveSubscription',
           ($0.GetSubscriptionRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              $0.ServiceSubscription.fromBuffer(value));
+              $0.ServiceSubscriptions.fromBuffer(value));
   static final _$triggerAlert =
       $grpc.ClientMethod<$0.TriggerAlertRequest, $0.TriggerAlertResponse>(
           '/Acumen/TriggerAlert',
@@ -103,7 +103,7 @@ class AcumenClient extends $grpc.Client {
     return $createUnaryCall(_$getSubscriptions, request, options: options);
   }
 
-  $grpc.ResponseStream<$0.ServiceSubscription> liveSubscription(
+  $grpc.ResponseStream<$0.ServiceSubscriptions> liveSubscription(
       $0.GetSubscriptionRequest request,
       {$grpc.CallOptions? options}) {
     return $createStreamingCall(
@@ -192,14 +192,14 @@ abstract class AcumenServiceBase extends $grpc.Service {
                 $0.GetSubscriptionRequest.fromBuffer(value),
             ($0.ServiceSubscriptions value) => value.writeToBuffer()));
     $addMethod(
-        $grpc.ServiceMethod<$0.GetSubscriptionRequest, $0.ServiceSubscription>(
+        $grpc.ServiceMethod<$0.GetSubscriptionRequest, $0.ServiceSubscriptions>(
             'LiveSubscription',
             liveSubscription_Pre,
             false,
             true,
             ($core.List<$core.int> value) =>
                 $0.GetSubscriptionRequest.fromBuffer(value),
-            ($0.ServiceSubscription value) => value.writeToBuffer()));
+            ($0.ServiceSubscriptions value) => value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$0.TriggerAlertRequest, $0.TriggerAlertResponse>(
             'TriggerAlert',
@@ -293,7 +293,7 @@ abstract class AcumenServiceBase extends $grpc.Service {
     return getSubscriptions(call, await request);
   }
 
-  $async.Stream<$0.ServiceSubscription> liveSubscription_Pre(
+  $async.Stream<$0.ServiceSubscriptions> liveSubscription_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.GetSubscriptionRequest> request) async* {
     yield* liveSubscription(call, await request);
@@ -355,7 +355,7 @@ abstract class AcumenServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.AddSubscriptionRequest request);
   $async.Future<$0.ServiceSubscriptions> getSubscriptions(
       $grpc.ServiceCall call, $0.GetSubscriptionRequest request);
-  $async.Stream<$0.ServiceSubscription> liveSubscription(
+  $async.Stream<$0.ServiceSubscriptions> liveSubscription(
       $grpc.ServiceCall call, $0.GetSubscriptionRequest request);
   $async.Future<$0.TriggerAlertResponse> triggerAlert(
       $grpc.ServiceCall call, $0.TriggerAlertRequest request);
