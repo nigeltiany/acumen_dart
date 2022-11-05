@@ -14,12 +14,16 @@ class SubscriptionProvider extends $pb.ProtobufEnum {
   static const SubscriptionProvider NETFLIX = SubscriptionProvider._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'NETFLIX');
   static const SubscriptionProvider HULU = SubscriptionProvider._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'HULU');
   static const SubscriptionProvider SPOTIFY = SubscriptionProvider._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'SPOTIFY');
+  static const SubscriptionProvider CHEGG = SubscriptionProvider._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'CHEGG');
+  static const SubscriptionProvider HBO = SubscriptionProvider._(5, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'HBO');
 
   static const $core.List<SubscriptionProvider> values = <SubscriptionProvider> [
     UNKNOWN,
     NETFLIX,
     HULU,
     SPOTIFY,
+    CHEGG,
+    HBO,
   ];
 
   static final $core.Map<$core.int, SubscriptionProvider> _byValue = $pb.ProtobufEnum.initByValue(values);

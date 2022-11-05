@@ -16,11 +16,13 @@ const SubscriptionProvider$json = const {
     const {'1': 'NETFLIX', '2': 1},
     const {'1': 'HULU', '2': 2},
     const {'1': 'SPOTIFY', '2': 3},
+    const {'1': 'CHEGG', '2': 4},
+    const {'1': 'HBO', '2': 5},
   ],
 };
 
 /// Descriptor for `SubscriptionProvider`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List subscriptionProviderDescriptor = $convert.base64Decode('ChRTdWJzY3JpcHRpb25Qcm92aWRlchILCgdVTktOT1dOEAASCwoHTkVURkxJWBABEggKBEhVTFUQAhILCgdTUE9USUZZEAM=');
+final $typed_data.Uint8List subscriptionProviderDescriptor = $convert.base64Decode('ChRTdWJzY3JpcHRpb25Qcm92aWRlchILCgdVTktOT1dOEAASCwoHTkVURkxJWBABEggKBEhVTFUQAhILCgdTUE9USUZZEAMSCQoFQ0hFR0cQBBIHCgNIQk8QBQ==');
 @$core.Deprecated('Use alertTypeDescriptor instead')
 const AlertType$json = const {
   '1': 'AlertType',
