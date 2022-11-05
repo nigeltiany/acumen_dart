@@ -230,11 +230,12 @@ const MonthlySpendingLimit$json = const {
   '1': 'MonthlySpendingLimit',
   '2': const [
     const {'1': 'limit', '3': 1, '4': 1, '5': 2, '10': 'limit'},
+    const {'1': 'currentSpending', '3': 2, '4': 1, '5': 2, '10': 'currentSpending'},
   ],
 };
 
 /// Descriptor for `MonthlySpendingLimit`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List monthlySpendingLimitDescriptor = $convert.base64Decode('ChRNb250aGx5U3BlbmRpbmdMaW1pdBIUCgVsaW1pdBgBIAEoAlIFbGltaXQ=');
+final $typed_data.Uint8List monthlySpendingLimitDescriptor = $convert.base64Decode('ChRNb250aGx5U3BlbmRpbmdMaW1pdBIUCgVsaW1pdBgBIAEoAlIFbGltaXQSKAoPY3VycmVudFNwZW5kaW5nGAIgASgCUg9jdXJyZW50U3BlbmRpbmc=');
 @$core.Deprecated('Use getSavingObjectivesRequestDescriptor instead')
 const GetSavingObjectivesRequest$json = const {
   '1': 'GetSavingObjectivesRequest',

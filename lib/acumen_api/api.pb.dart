@@ -1036,16 +1036,21 @@ class GetMonthlySpendingLimitRequest extends $pb.GeneratedMessage {
 class MonthlySpendingLimit extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MonthlySpendingLimit', createEmptyInstance: create)
     ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'limit', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentSpending', $pb.PbFieldType.OF, protoName: 'currentSpending')
     ..hasRequiredFields = false
   ;
 
   MonthlySpendingLimit._() : super();
   factory MonthlySpendingLimit({
     $core.double? limit,
+    $core.double? currentSpending,
   }) {
     final _result = create();
     if (limit != null) {
       _result.limit = limit;
+    }
+    if (currentSpending != null) {
+      _result.currentSpending = currentSpending;
     }
     return _result;
   }
@@ -1078,6 +1083,15 @@ class MonthlySpendingLimit extends $pb.GeneratedMessage {
   $core.bool hasLimit() => $_has(0);
   @$pb.TagNumber(1)
   void clearLimit() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get currentSpending => $_getN(1);
+  @$pb.TagNumber(2)
+  set currentSpending($core.double v) { $_setFloat(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasCurrentSpending() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearCurrentSpending() => clearField(2);
 }
 
 class GetSavingObjectivesRequest extends $pb.GeneratedMessage {
