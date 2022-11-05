@@ -292,9 +292,10 @@ final $typed_data.Uint8List getSpendingHistoryRequestDescriptor = $convert.base6
 const AddSpendingRequest$json = const {
   '1': 'AddSpendingRequest',
   '2': const [
-    const {'1': 'amount', '3': 1, '4': 1, '5': 2, '10': 'amount'},
+    const {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    const {'1': 'amount', '3': 2, '4': 1, '5': 2, '10': 'amount'},
   ],
 };
 
 /// Descriptor for `AddSpendingRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addSpendingRequestDescriptor = $convert.base64Decode('ChJBZGRTcGVuZGluZ1JlcXVlc3QSFgoGYW1vdW50GAEgASgCUgZhbW91bnQ=');
+final $typed_data.Uint8List addSpendingRequestDescriptor = $convert.base64Decode('ChJBZGRTcGVuZGluZ1JlcXVlc3QSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEhYKBmFtb3VudBgCIAEoAlIGYW1vdW50');

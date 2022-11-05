@@ -1319,15 +1319,20 @@ class GetSpendingHistoryRequest extends $pb.GeneratedMessage {
 
 class AddSpendingRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddSpendingRequest', createEmptyInstance: create)
-    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OF)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'userId')
+    ..a<$core.double>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OF)
     ..hasRequiredFields = false
   ;
 
   AddSpendingRequest._() : super();
   factory AddSpendingRequest({
+    $core.String? userId,
     $core.double? amount,
   }) {
     final _result = create();
+    if (userId != null) {
+      _result.userId = userId;
+    }
     if (amount != null) {
       _result.amount = amount;
     }
@@ -1355,12 +1360,21 @@ class AddSpendingRequest extends $pb.GeneratedMessage {
   static AddSpendingRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.double get amount => $_getN(0);
+  $core.String get userId => $_getSZ(0);
   @$pb.TagNumber(1)
-  set amount($core.double v) { $_setFloat(0, v); }
+  set userId($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasAmount() => $_has(0);
+  $core.bool hasUserId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAmount() => clearField(1);
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get amount => $_getN(1);
+  @$pb.TagNumber(2)
+  set amount($core.double v) { $_setFloat(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAmount() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAmount() => clearField(2);
 }
 
