@@ -137,10 +137,11 @@ class AcumenClient extends $grpc.Client {
         options: options);
   }
 
-  $grpc.ResponseFuture<$0.MonthlySpendingLimit> liveMonthlySpendingLimit(
+  $grpc.ResponseStream<$0.MonthlySpendingLimit> liveMonthlySpendingLimit(
       $0.GetMonthlySpendingLimitRequest request,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$liveMonthlySpendingLimit, request,
+    return $createStreamingCall(
+        _$liveMonthlySpendingLimit, $async.Stream.fromIterable([request]),
         options: options);
   }
 
@@ -245,7 +246,7 @@ abstract class AcumenServiceBase extends $grpc.Service {
         'LiveMonthlySpendingLimit',
         liveMonthlySpendingLimit_Pre,
         false,
-        false,
+        true,
         ($core.List<$core.int> value) =>
             $0.GetMonthlySpendingLimitRequest.fromBuffer(value),
         ($0.MonthlySpendingLimit value) => value.writeToBuffer()));
@@ -339,10 +340,10 @@ abstract class AcumenServiceBase extends $grpc.Service {
     return getMonthlySpendingLimit(call, await request);
   }
 
-  $async.Future<$0.MonthlySpendingLimit> liveMonthlySpendingLimit_Pre(
+  $async.Stream<$0.MonthlySpendingLimit> liveMonthlySpendingLimit_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$0.GetMonthlySpendingLimitRequest> request) async {
-    return liveMonthlySpendingLimit(call, await request);
+      $async.Future<$0.GetMonthlySpendingLimitRequest> request) async* {
+    yield* liveMonthlySpendingLimit(call, await request);
   }
 
   $async.Future<$0.SavingWithObjective> createSavingWithObjective_Pre(
@@ -391,7 +392,7 @@ abstract class AcumenServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.SetMonthlySpendingLimitRequest request);
   $async.Future<$0.MonthlySpendingLimit> getMonthlySpendingLimit(
       $grpc.ServiceCall call, $0.GetMonthlySpendingLimitRequest request);
-  $async.Future<$0.MonthlySpendingLimit> liveMonthlySpendingLimit(
+  $async.Stream<$0.MonthlySpendingLimit> liveMonthlySpendingLimit(
       $grpc.ServiceCall call, $0.GetMonthlySpendingLimitRequest request);
   $async.Future<$0.SavingWithObjective> createSavingWithObjective(
       $grpc.ServiceCall call, $0.CreateSavingWithObjectiveRequest request);
