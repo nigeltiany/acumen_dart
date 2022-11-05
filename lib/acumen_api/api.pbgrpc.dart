@@ -51,6 +51,12 @@ class AcumenClient extends $grpc.Client {
       ($0.GetMonthlySpendingLimitRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.MonthlySpendingLimit.fromBuffer(value));
+  static final _$addSpending =
+      $grpc.ClientMethod<$0.AddSpendingRequest, $0.MonthlySpendingLimit>(
+          '/Acumen/AddSpending',
+          ($0.AddSpendingRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.MonthlySpendingLimit.fromBuffer(value));
   static final _$liveMonthlySpendingLimit = $grpc.ClientMethod<
           $0.GetMonthlySpendingLimitRequest, $0.MonthlySpendingLimit>(
       '/Acumen/LiveMonthlySpendingLimit',
@@ -135,6 +141,12 @@ class AcumenClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getMonthlySpendingLimit, request,
         options: options);
+  }
+
+  $grpc.ResponseFuture<$0.MonthlySpendingLimit> addSpending(
+      $0.AddSpendingRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$addSpending, request, options: options);
   }
 
   $grpc.ResponseStream<$0.MonthlySpendingLimit> liveMonthlySpendingLimit(
@@ -241,6 +253,15 @@ abstract class AcumenServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetMonthlySpendingLimitRequest.fromBuffer(value),
         ($0.MonthlySpendingLimit value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.AddSpendingRequest, $0.MonthlySpendingLimit>(
+            'AddSpending',
+            addSpending_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.AddSpendingRequest.fromBuffer(value),
+            ($0.MonthlySpendingLimit value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetMonthlySpendingLimitRequest,
             $0.MonthlySpendingLimit>(
         'LiveMonthlySpendingLimit',
@@ -340,6 +361,11 @@ abstract class AcumenServiceBase extends $grpc.Service {
     return getMonthlySpendingLimit(call, await request);
   }
 
+  $async.Future<$0.MonthlySpendingLimit> addSpending_Pre($grpc.ServiceCall call,
+      $async.Future<$0.AddSpendingRequest> request) async {
+    return addSpending(call, await request);
+  }
+
   $async.Stream<$0.MonthlySpendingLimit> liveMonthlySpendingLimit_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.GetMonthlySpendingLimitRequest> request) async* {
@@ -392,6 +418,8 @@ abstract class AcumenServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.SetMonthlySpendingLimitRequest request);
   $async.Future<$0.MonthlySpendingLimit> getMonthlySpendingLimit(
       $grpc.ServiceCall call, $0.GetMonthlySpendingLimitRequest request);
+  $async.Future<$0.MonthlySpendingLimit> addSpending(
+      $grpc.ServiceCall call, $0.AddSpendingRequest request);
   $async.Stream<$0.MonthlySpendingLimit> liveMonthlySpendingLimit(
       $grpc.ServiceCall call, $0.GetMonthlySpendingLimitRequest request);
   $async.Future<$0.SavingWithObjective> createSavingWithObjective(

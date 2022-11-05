@@ -18,11 +18,13 @@ const SubscriptionProvider$json = const {
     const {'1': 'SPOTIFY', '2': 3},
     const {'1': 'CHEGG', '2': 4},
     const {'1': 'HBO', '2': 5},
+    const {'1': 'YOUTUBE', '2': 6},
+    const {'1': 'DISNEY', '2': 7},
   ],
 };
 
 /// Descriptor for `SubscriptionProvider`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List subscriptionProviderDescriptor = $convert.base64Decode('ChRTdWJzY3JpcHRpb25Qcm92aWRlchILCgdVTktOT1dOEAASCwoHTkVURkxJWBABEggKBEhVTFUQAhILCgdTUE9USUZZEAMSCQoFQ0hFR0cQBBIHCgNIQk8QBQ==');
+final $typed_data.Uint8List subscriptionProviderDescriptor = $convert.base64Decode('ChRTdWJzY3JpcHRpb25Qcm92aWRlchILCgdVTktOT1dOEAASCwoHTkVURkxJWBABEggKBEhVTFUQAhILCgdTUE9USUZZEAMSCQoFQ0hFR0cQBBIHCgNIQk8QBRILCgdZT1VUVUJFEAYSCgoGRElTTkVZEAc=');
 @$core.Deprecated('Use alertTypeDescriptor instead')
 const AlertType$json = const {
   '1': 'AlertType',
@@ -286,3 +288,13 @@ const GetSpendingHistoryRequest$json = const {
 
 /// Descriptor for `GetSpendingHistoryRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getSpendingHistoryRequestDescriptor = $convert.base64Decode('ChlHZXRTcGVuZGluZ0hpc3RvcnlSZXF1ZXN0EhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZA==');
+@$core.Deprecated('Use addSpendingRequestDescriptor instead')
+const AddSpendingRequest$json = const {
+  '1': 'AddSpendingRequest',
+  '2': const [
+    const {'1': 'amount', '3': 1, '4': 1, '5': 2, '10': 'amount'},
+  ],
+};
+
+/// Descriptor for `AddSpendingRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addSpendingRequestDescriptor = $convert.base64Decode('ChJBZGRTcGVuZGluZ1JlcXVlc3QSFgoGYW1vdW50GAEgASgCUgZhbW91bnQ=');

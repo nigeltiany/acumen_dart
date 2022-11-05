@@ -1317,3 +1317,50 @@ class GetSpendingHistoryRequest extends $pb.GeneratedMessage {
   void clearUserId() => clearField(1);
 }
 
+class AddSpendingRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddSpendingRequest', createEmptyInstance: create)
+    ..a<$core.double>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  AddSpendingRequest._() : super();
+  factory AddSpendingRequest({
+    $core.double? amount,
+  }) {
+    final _result = create();
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
+  factory AddSpendingRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AddSpendingRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  AddSpendingRequest clone() => AddSpendingRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AddSpendingRequest copyWith(void Function(AddSpendingRequest) updates) => super.copyWith((message) => updates(message as AddSpendingRequest)) as AddSpendingRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AddSpendingRequest create() => AddSpendingRequest._();
+  AddSpendingRequest createEmptyInstance() => create();
+  static $pb.PbList<AddSpendingRequest> createRepeated() => $pb.PbList<AddSpendingRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AddSpendingRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AddSpendingRequest>(create);
+  static AddSpendingRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get amount => $_getN(0);
+  @$pb.TagNumber(1)
+  set amount($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAmount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAmount() => clearField(1);
+}
+
